@@ -24,5 +24,5 @@ This project is part of a technical DevOps challenge. It provisions a self-hoste
 
 ### 1. Clone this repo
 ```bash
-git clone https://github.com/yourname/gitea-devops-challenge.git
+git clone https://github.com/yournameVitmer/gitea-devops-challenge.git
 cd gitea-devops-challenge
