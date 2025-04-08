@@ -1,0 +1,41 @@
+# Terraform state & cache
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+terraform.tfvars
+
+# SSL certs (self-signed, local only)
+certs/
+
+# Backup archives (should not go into VCS)
+backups/
+*/backups/
+*/gitea_data_*.tar.gz
+*/db_backup_*.sql
+
+# Editor/OS files
+.DS_Store
+*.swp
+*.swo
+*.bak
+*.tmp
+.idea/
+.vscode/
+
+# Log files
+*.log
+
+# Docker volumes
+volumes/
+
+# Fluent Bit temp files (if any)
+fluent-bit.conf
+
+# Prometheus generated data (if any)
+prometheus_data/
