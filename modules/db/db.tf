@@ -17,6 +17,6 @@ resource "docker_container" "gitea_db" {
   }
 
   networks_advanced {
-    name = docker_network.gitea_network.name
+    name = var.network_name
   }
 }

@@ -1,18 +1,20 @@
 resource "docker_container" "watchtower" {
-  name  = "watchtower"
-  image = "containrrr/watchtower"
+  name   = var.watchtower_name
+  image  = var.watchtower_image
   restart = "always"
 
   command = [
-    "--cleanup", "--interval", "300", "gitea", "gitea_postgres"
+    "--cleanup",
+    "--interval", var.watchtower_interval
   ]
 
   volumes {
     host_path      = "/var/run/docker.sock"
     container_path = "/var/run/docker.sock"
+    read_only      = true
   }
 
   networks_advanced {
-    name = docker_network.gitea_network.name
+    name = var.network_name
   }
 }
